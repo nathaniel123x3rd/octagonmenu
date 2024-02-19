@@ -4,13 +4,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <meta name="og:title" content="Octagon Menu">
+  <meta name="og:site_name" content="Octagon Menu">
+  <meta name="og:description" content="A radial octagon menu with hover effect.">
+  <meta data-n-head="ssr" data-hid="og:image" property="og:image" content="https://nathaniel.world/spinningwheel/emoji.png" type="image/x-png">
+  <meta name="og:url" content="https://nathaniel.world/octagonmenu">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#39ffe2">
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://nathaniel.world/spinningwheel/emoji.png" rel="icon" type="image/png" />
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
+ <ul class="menu">
+   <div class="menuToggle"><ion-icon name="add-outline"></ion-icon></div>
+   <li style="--i:0;--clr:#ff2972;">
+      <a href="#"><ion-icon name="finger-print-outline"></ion-icon></a>
+    </li>
+   <li style="--i:1;--clr:#fee800;">
+      <a href="#"><ion-icon name="game-controller-outline"></ion-icon></a>
+    </li>
+   <li style="--i:2;--clr:#04fc43;">
+      <a href="#"><ion-icon name="paw-outline"></ion-icon></a>
+    </li>
+   <li style="--i:3;--clr:#fe00f1;">
+      <a href="#"><ion-icon name="shirt-outline"></ion-icon></a>
+    </li>
+   <li style="--i:4;--clr:#00b0fe;">
+      <a href="#"><ion-icon name="sync-circle-outline"></ion-icon></a>
+    </li>
+   <li style="--i:5;--clr:#fea600;">
+      <a href="#"><ion-icon name="wine-outline"></ion-icon></a>
+    </li>
+   <li style="--i:6;--clr:#a529ff;">
+      <a href="#"><ion-icon name="heart-dislike-outline"></ion-icon></a>
+    </li>
+   <li style="--i:7;--clr:#01bdab;">
+      <a href="#"><ion-icon name="megaphone-outline"></ion-icon></a>
+    </li>
+ </ul>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    let menuToggle = document.querySelector('.menuToggle');
+    let menu = document.querySelector('.menu');
+    menuToggle.onclick = function(){
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
-
 </html>
